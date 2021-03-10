@@ -1,0 +1,92 @@
+body{
+  width: 100%;
+  background-color: $subtitle-color;
+}
+
+.sidebar{
+  //position: fixed;
+  background-color: $sidebar-background-color;
+  height: 1700px;
+
+  h1{
+    color: $logo-color;
+    font-family: $logo-font;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 10px;
+
+    i{
+      font-size: 25px;
+      margin-left: 50px;
+      color: $sidebar-text-color;
+    }
+  }
+
+  .menu{
+    border-bottom: $subtitle-color 1px solid;
+    padding-bottom: 10px;
+
+    a{
+      display: block;
+      text-decoration: none;
+      color: $sidebar-text-color;
+      font-family: $font;
+      font-size: 18px;
+      margin: 15px;
+      padding: 10px;
+
+      i{
+        color: $sidebar-text-color;
+        font-size: 15px;
+        padding-right: 20px;
+      }
+    }
+
+    a:hover{
+      background-color: $sidebar-hover-background-color;
+      border-left: solid 5px #F58220;
+    }
+
+  }
+}
+
+.top-bar{
+  //position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $logo-color;
+  padding: 0;
+
+    p{
+      margin-left: 5px;
+      padding: 15px 15px;
+      border-left: solid 3px $border-color;
+      font-size: 20px;
+      font-family: $font;
+      font-weight: medium;
+      color: $subtitle-color;
+
+      i{
+        font-size: 18px;
+        padding: 0 15px;
+        color: $subtitle-color;
+        font-weight: medium;
+      }
+    }
+    .top-bar-login{
+      color: $user-name-color;
+    }
+
+    .top-bar-amount{
+      font-weight: bolder;
+    }
+}
+
+.container{
+  margin: 10px 0;
+  width: 100%;
+  background-color: $logo-color;
+}
