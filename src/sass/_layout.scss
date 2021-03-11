@@ -45,7 +45,7 @@ body{
 
     a:hover{
       background-color: $sidebar-hover-background-color;
-      border-left: solid 5px #F58220;
+      border-left: solid 5px $button-color;
     }
 
   }
@@ -60,33 +60,279 @@ body{
   background-color: $logo-color;
   padding: 0;
 
-    p{
-      margin-left: 5px;
-      padding: 15px 15px;
-      border-left: solid 3px $border-color;
-      font-size: 20px;
-      font-family: $font;
-      font-weight: medium;
+  p{
+    margin-left: 5px;
+    padding: 15px 15px;
+    border-left: solid 1px $border-color;
+    font-size: 20px;
+    font-family: $font;
+    font-weight: medium;
+    color: $subtitle-color;
+
+    i{
+      font-size: 18px;
+      padding: 0 15px;
       color: $subtitle-color;
+      font-weight: medium;
+    }
+  }
 
-      i{
-        font-size: 18px;
-        padding: 0 15px;
-        color: $subtitle-color;
-        font-weight: medium;
-      }
-    }
-    .top-bar-login{
-      color: $user-name-color;
-    }
+  .top-bar-login{
+    color: $user-name-color;
+  }
 
-    .top-bar-amount{
-      font-weight: bolder;
-    }
+  .top-bar-amount{
+    font-weight: bolder;
+  }
 }
 
 .container{
-  margin: 10px 0;
+  margin: 10px auto;
   width: 100%;
   background-color: $logo-color;
+
+  h3{
+    font-family: $font;
+    color: $subtitle-color;
+    font-weight: 500;
+    padding: 20px;
+    border-bottom: solid 1px $subtitle-color;
+    margin: 0;
+  }
 }
+
+.date-picker{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px $subtitle-color;
+  margin: 15px 0 30px 0;
+}
+
+.date{
+  margin: 20px 20px 30px 20px;
+  border: solid 1.5px $subtitle-color;
+  border-radius: 5px;
+  width: 30%;
+  padding: 0;
+
+  p{
+    display: inline-block;
+    font-family: $font;
+    font-size: 16px;
+    padding: 5px 30px 5px 18px;
+    margin: 8px 0;
+    color: $sidebar-background-color;
+  }
+
+  .date-finish{
+    border-left: solid 1.5px $subtitle-color;
+
+    i{
+      padding-left: 45px;
+      padding-right: 0;
+      color: $subtitle-color;
+    }
+  }
+}
+
+.button{
+  margin: 20px;
+
+  i{
+    background-color: $button-color;
+    color: $logo-color;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+  }
+}
+
+.statistic{
+  margin: 10px auto;
+
+  .left, .right{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left{
+    align-items: flex-end;
+  }
+
+  .details{
+    border-bottom: solid 1px $subtitle-color;
+    margin: 10px;
+    width: 60%;
+    justify-content: space-between;
+
+    .title, .number{
+      text-align: center;
+      font-family: $font;
+      font-size: 16px;
+    }
+
+    .title{
+      color: $subtitle-color;
+      font-weight: bolder;
+    }
+
+    .number{
+      color: $sidebar-background-color;
+    }
+  }
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  font-family: $font;
+}
+
+table {
+  display: block; /* fixes layout wonkiness in FF1.5 */
+  position: relative;
+  width: 700px;
+  height: 350px;
+  //margin: 1.1em 0 0;
+  margin: 60px 0;
+  padding: 0;
+  background: transparent;
+  font-size: 11px;
+}
+
+.chart-head{
+  display: flex;
+  justify-content: start;
+
+  .chart-title{
+    font-family: $font;
+    color: $subtitle-color;
+    font-size: 16px;
+    border: solid 2px black;
+  }
+
+  .chart-legend{
+    p{
+      font-family: $font;
+      color: $subtitle-color;
+    }
+  }
+}
+
+tr, th, td {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+tbody tr {
+  height: 350px;
+  padding-top: 2px;
+  border-right: 1px solid $subtitle-color;
+  color: #AAA;
+}
+
+.q1 {
+  left: 0;
+}
+
+.q2 {
+  left: 70px;
+}
+
+.q3 {
+  left: 140px;
+}
+
+.q4 {
+  left: 210px;
+}
+
+.q5 {
+  left: 280px;
+}
+
+.q6 {
+  left: 350px;
+}
+
+.q7 {
+  left: 420px;
+}
+
+.q8 {
+  left: 490px;
+}
+
+.q9 {
+  left: 560px;
+}
+
+.q10 {
+  left: 630px;
+  border-right: none;
+}
+
+tbody th {
+  bottom: -1.75em;
+  vertical-align: top;
+  font-weight: normal;
+  color: #333;
+}
+
+.bar {
+  width: 25px;
+  border: 1px solid;
+  border-radius: 2px;
+  border-bottom: none;
+  color: #000;
+}
+
+.sent {
+  left: 45px;
+  background-color: $color-sent;
+  border-color: transparent;
+}
+
+.paid {
+  left: 15px;
+  background-color: $color-paid;
+  border-color: transparent;
+}
+
+.ticks {
+  position: relative;
+  top: -398px;
+  left: 2px;
+  width: 700px;
+  height: 300px;
+  z-index: 1;
+  margin-bottom: 20px;
+  font-size: 10px;
+  font-family: $font;
+}
+
+.tick {
+  position: relative;
+  width: 700px;
+
+  p {
+    position: absolute;
+    left: -5em;
+    top: -0.8em;
+    margin: 0 0 0 0.5em;
+  }
+}
+
