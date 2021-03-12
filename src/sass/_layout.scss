@@ -187,18 +187,13 @@ body{
   }
 }
 
-.button{
-  background-color: $button-color;
-  color: $logo-color;
-  border-radius: 5px;
-
-  i {
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-  }
+.button.undo{
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
 }
 
 .button:hover{
@@ -263,7 +258,10 @@ body{
   margin-bottom: 5px;
 }
 
-.links .button{
+.button{
+  background-color: $button-color;
+  color: $logo-color;
+  border-radius: 5px;
   width: 12%;
   margin: 40px auto;
   text-align: center;
@@ -331,6 +329,51 @@ body{
 
     i:hover{
       font-size: 20px;
+    }
+  }
+}
+
+.card-container.third{
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.personal-data{
+  width: 100%;
+
+  form {
+    width: 100%;
+  }
+
+  .section{
+    border-bottom: 1px solid $subtitle-color;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-data{
+    font-family: $font;
+    color: $subtitle-color;
+    font-size: 18px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 40%;
+
+    label {
+      width: 40%;
+    }
+
+    input{
+      width: 60%;
+      height: 35px;
+      border-radius: 5px;
+      border: 1px solid $subtitle-color;
     }
   }
 }
@@ -441,4 +484,33 @@ body{
   .links .button{
     width: 30%;
   }
+
+  .personal-data{
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-data{
+    flex-direction: column;
+
+    input{
+      width: 100%;
+    }
+
+    label{
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+
+  .button.save{
+    width: 30%;
+    margin: 20px auto;
+
+    p{
+      padding: 10px 0;
+      margin: 0;
+    }
+  }
+
 }
