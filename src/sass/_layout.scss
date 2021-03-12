@@ -3,7 +3,7 @@ body{
 }
 
 .sidebar{
-  //position: fixed;
+  position: fixed;
   background-color: $sidebar-background-color;
   min-width: 15%;
   height: 100vh;
@@ -51,6 +51,33 @@ body{
   }
 }
 
+.messenger {
+  h4{
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 25px;
+    color: $sidebar-text-color;
+  }
+
+  p{
+    font-family: $font;
+    font-size: 16px;
+    color: $user-name-color;
+    margin-left: 10px;
+  }
+
+  img{
+    margin-left: 20px;
+  }
+
+  .contact{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+  }
+}
+
 .main-container {
   margin: 0;
   display: flex;
@@ -60,7 +87,7 @@ body{
 
 .display-container {
   width: 85%;
-  //margin-left: 15%;
+  margin-left: 15%;
 }
 
 .top-bar{
@@ -127,11 +154,12 @@ body{
   justify-content: center;
   align-items: center;
   border-bottom: solid 1px $subtitle-color;
-  margin: 15px 0 30px 0;
+  margin: 30px 0 50px 0;
+  padding-bottom: 30px;
 }
 
 .date{
-  margin: 20px 20px 30px 20px;
+  margin-right: 10px;
   border: solid 1.5px $subtitle-color;
   border-radius: 5px;
   width: 30%;
@@ -150,7 +178,7 @@ body{
     border-left: solid 1.5px $subtitle-color;
 
     i{
-      padding-left: 45px;
+      padding-left: 50px;
       padding-right: 0;
       color: $subtitle-color;
     }
@@ -158,18 +186,21 @@ body{
 }
 
 .button{
-  margin: 20px;
+  background-color: $button-color;
+  color: $logo-color;
+  border-radius: 5px;
 
-  i{
-    background-color: $button-color;
-    color: $logo-color;
+  i {
     font-size: 20px;
     width: 40px;
     height: 40px;
     line-height: 40px;
     text-align: center;
-    border-radius: 5px;
   }
+}
+
+.button:hover{
+  cursor: pointer;
 }
 
 .statistic{
@@ -218,3 +249,80 @@ body{
   }
 }
 
+.card-container.second{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.links .button{
+  width: 12%;
+  margin: 40px auto;
+  text-align: center;
+
+  p{
+    font-family: $font;
+    font-size: 18px;
+    padding: 15px;
+    font-weight: lighter;
+  }
+}
+
+.link{
+  display: flex;
+  flex-direction: row;
+  //justify-content: space-between;
+  border-top: 1px solid $subtitle-color;
+  width: 75%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-size: 20px;
+  font-family: $font;
+
+  p, a, i{
+    margin: 0;
+    padding: 0;
+  }
+
+  p{
+    color: $subtitle-color;
+    font-weight: bolder;
+    width: 40%;
+  }
+
+  a{
+    color: $user-name-color;
+    text-decoration: none;
+    width: 50%;
+  }
+
+  i{
+    color: $subtitle-color;
+    font-size: 17px;
+  }
+
+  .link-icon{
+    color: $color-sent;
+    padding-right: 25px;
+  }
+
+  .icons {
+    display: none;
+  }
+}
+
+.link.last{
+  border-bottom: 1px solid $subtitle-color;
+}
+
+.link:hover{
+  background-color: $body-color;
+  cursor: pointer;
+
+  .icons {
+    display: inherit;
+
+    i:hover{
+      font-size: 20px;
+    }
+  }
+}
