@@ -11,3 +11,6 @@
 /* Pages / Views */
 //@import "pages/registration";
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
