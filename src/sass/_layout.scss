@@ -205,10 +205,15 @@ body{
 
 .statistic{
   margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 
   .left, .right{
     display: flex;
     flex-direction: column;
+    width: 45%;
   }
 
   .left{
@@ -219,6 +224,8 @@ body{
     border-bottom: solid 1px $subtitle-color;
     margin: 10px;
     width: 60%;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 
     .title, .number{
@@ -270,7 +277,6 @@ body{
 .link{
   display: flex;
   flex-direction: row;
-  //justify-content: space-between;
   border-top: 1px solid $subtitle-color;
   width: 75%;
   margin: 0 auto;
@@ -324,5 +330,108 @@ body{
     i:hover{
       font-size: 20px;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-container {
+    margin: 0;
+    flex-direction: column;
+    //height: 100%;
+  }
+
+  .sidebar{
+    height: 70px;
+    width: 100%;
+    z-index: 2;
+
+    i:hover{
+      cursor: pointer;
+
+      .menu, .messenger{
+        display: block;
+        background-color: inherit;
+        z-index: 2;
+      }
+    }
+  }
+
+  .menu, .messenger{
+    display: none;
+    background-color: inherit;
+  }
+
+  .display-container{
+    width: 100%;
+    margin: 0;
+  }
+
+  .top-bar{
+    margin: 70px 0 0 0;
+    width: 100%;
+
+  }
+
+  .layout{
+    margin-top: 100px;
+  }
+
+  .date{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    p{
+      margin: 0;
+      padding: 10px 0;
+      display: block;
+      text-align: center;
+
+      i{
+        display: none;
+      }
+    }
+
+    .date-finish{
+      border-top: solid 1.5px $subtitle-color;
+      border-left: none;
+
+      i{
+        color: $subtitle-color;
+      }
+    }
+  }
+
+  .statistic{
+    flex-direction: column;
+
+    .left, .right{
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  .chart img{
+    width: 400px;
+  }
+
+  .link{
+    display: flex;
+    flex-direction: column;
+
+    p, a, i{
+      margin: 7px 0;
+      text-align: start;
+      width: 100%;
+    }
+
+    .icons{
+      width: 20%;
+    }
+  }
+
+  .links .button{
+    width: 30%;
   }
 }
