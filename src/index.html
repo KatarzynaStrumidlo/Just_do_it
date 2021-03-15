@@ -240,61 +240,63 @@
               <div class="card-container third">
                 <h3>PERSONAL DATA</h3>
                 <div class="personal-data">
-                  <form class="form">
+                  <form class="form" action="" method="POST">
                     <div class="person section">
                       <div class="form-data">
                         <label>Name</label>
-                        <input type="text" required>
+                        <input type="text" name="user-name" required>
                       </div>
                       <div class="form-data">
                         <label>Surname</label>
-                        <input type="text" required>
+                        <input type="text" name="user-surname" required>
                       </div>
                       <div class="form-data">
                         <label>E-mail</label>
-                        <input type="email" required>
+                        <input type="email" name="user-email" required>
                       </div>
                       <div class="form-data">
                         <label>Phone number</label>
-                        <input type="tel" required>
+                        <input type="tel" name="user-phone" required>
                       </div>
                     </div>
 
                     <div class="internet-contact section">
                       <div class="form-data">
                         <label>Skype</label>
-                        <input type="text" required>
+                        <input type="text" name="user-skype" required>
                       </div>
                       <div class="form-data">
                         <label>ICQ</label>
-                        <input type="text" required>
+                        <input type="text" name="user-icq" required>
                       </div>
                       <div class="form-data">
                         <label>Msn</label>
-                        <input type="text" required>
+                        <input type="text" name="user-msn" required>
                       </div>
                     </div>
 
                     <div class="wallet section">
                       <div class="form-data">
                         <label>Wallet</label>
-                        <input type="text" required>
+                        <input type="text" name="user-wallet" required>
                       </div>
                     </div>
 
                     <div class="password section">
                       <div class="form-data">
                         <label>Password</label>
-                        <input type="password" required>
+                        <input type="password" name="user-password" required>
                       </div>
                       <div class="form-data">
                         <label>Repeat</label>
-                        <input type="password" required>
+                        <input type="password" name="user-password" required>
                       </div>
                     </div>
 
-                    <div class="button save">
-                      <p>Save</p>
+                    <div class="section">
+                      <div class="form-data">
+                        <button type="submit" class="button save">Save</button>
+                      </div>
                     </div>
                   </form>
                 </div>
