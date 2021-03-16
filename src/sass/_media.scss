@@ -147,6 +147,45 @@
       margin: 0;
     }
   }
+
+  .modal-message{
+    .photo{
+      img{
+        width: 30%;
+        height: 15%;
+      }
+    }
+
+    .conversation{
+      i{
+        font-size: 30px;
+      }
+    }
+
+    .send-message{
+      padding: 0;
+      width: 100%;
+
+      .message-text{
+        width: 60%;
+      }
+
+      .button{
+        width: 20%;
+        font-size: 18px;
+        margin-left: 3px;
+      }
+    }
+  }
+
+  .modal-quit{
+    width: 70%;
+    height: 15%;
+  }
+
+  .modal-login{
+    width: 100%;
+  }
 }
 
 @media (max-width: 361px) {
@@ -180,5 +219,59 @@
       width: 70%;
       font-size: 15px;
     }
+  }
+
+  .modal-message{
+    width: 100%;
+
+    .header{
+      h4{
+        font-size: 18px;
+      }
+    }
+
+    .photo{
+      img{
+        width: 50%;
+        height: 30%;
+      }
+    }
+
+    .conversation{
+      i{
+        font-size: 30px;
+      }
+    }
+
+    .send-message{
+      padding: 0;
+      width: 100%;
+
+
+      .message-text{
+        width: 70%;
+        margin: 0;
+        height: 40px;
+        font-size: 15px;
+      }
+
+      .button{
+        width: 30%;
+        height: 40px;
+        font-size: 15px;
+        padding: 2px;
+        margin: 0 3px;
+      }
+    }
+  }
+
+  .modal-quit{
+    margin: 0;
+    width: 90%;
+    height: 25%;;
+  }
+
+  .modal-login{
+    width: 100%;
   }
 }
