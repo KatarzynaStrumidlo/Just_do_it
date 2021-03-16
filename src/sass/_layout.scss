@@ -77,6 +77,10 @@ body{
     display: flex;
     flex-direction: row;
     margin-top: 15px;
+
+    .popup:hover{
+      cursor: pointer;
+    }
   }
 }
 
@@ -116,10 +120,18 @@ body{
       color: $subtitle-color;
       font-weight: medium;
     }
+
+    i:hover{
+      cursor: pointer;
+    }
   }
 
   .top-bar-login{
     color: $user-name-color;
+  }
+
+  .top-bar-login:hover{
+    cursor: pointer;
   }
 
   .top-bar-amount{
