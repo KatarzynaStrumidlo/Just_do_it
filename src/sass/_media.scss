@@ -2,6 +2,7 @@
   .main-container {
     margin: 0;
     flex-direction: column;
+    width: 100%;
   }
 
   .sidebar{
@@ -190,7 +191,13 @@
 
 @media (max-width: 361px) {
   .display-container{
+    margin-left: 0;
     width: 100%;
+  }
+
+  .layout{
+    width: 100%;
+    margin: 0;
   }
 
   .top-bar{

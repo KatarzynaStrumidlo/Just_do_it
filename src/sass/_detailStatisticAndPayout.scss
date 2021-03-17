@@ -1,0 +1,40 @@
+.card-container.fourth{
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.date-picker {
+  margin-bottom: 20px;
+}
+
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper table {
+  width: 90%;
+  max-width: 90%;
+  margin: 10px auto 30px auto;
+  font-family: $font;
+  font-size: 15px;
+}
+
+thead{
+  color: $subtitle-color;
+  text-align: left;
+}
+
+tbody{
+  color: $sidebar-background-color;
+}
+
+th, td{
+  border-bottom: solid 1px $subtitle-color;
+  padding: 20px 5px;
+}
+
+tr {
+  width: auto;
+}

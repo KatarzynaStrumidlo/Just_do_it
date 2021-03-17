@@ -59,18 +59,18 @@
         <div class="sidebar">
             <h1>Just do it <i class="fas fa-bars hamburger"></i></h1>
             <div class="menu">
-              <a href="#"><i class="fas fa-star"></i>General</a>
-              <a href="#"><i class="fas fa-sitemap"></i>Details</a>
-              <a href="#"><i class="fas fa-link"></i>Links</a>
-              <a href="#"><i class="fas fa-sign"></i>Banners</a>
-              <a href="#"><i class="fas fa-user"></i>Personal data</a>
-              <a href="#"><i class="fas fa-file-invoice-dollar"></i>Payout</a>
-              <a href="#"><i class="fas fa-reply"></i>Postback</a>
+              <a class="menu-item" href="#"><i class="fas fa-star"></i>General</a>
+              <a class="menu-item" href="#links"><i class="fas fa-link"></i>Links</a>
+              <a class="menu-item" href="#banners"><i class="fas fa-sign"></i>Banners</a>
+              <a class="menu-item" href="#personalData"><i class="fas fa-user"></i>Personal data</a>
+              <a class="menu-item" href="#details"><i class="fas fa-sitemap"></i>Details</a>
+              <a class="menu-item" href="#payout"><i class="fas fa-file-invoice-dollar"></i>Payout</a>
+              <a class="menu-item" href="#"><i class="fas fa-reply"></i>Postback</a>
 
               <div class="messenger">
                 <h4>YOUR MANAGER</h4>
                 <div class="contact">
-                  <img class="popup" src="images/face.png">
+                  <img class="popup menu-item" src="images/face.png">
                   <p class="popup">Mikhael E.</p>
                 </div>
               </div>
@@ -79,7 +79,7 @@
         </div>
         <div class="display-container">
             <div class="top-bar">
-              <p class="top-bar-amount"><i class="fas fa-wallet"></i>$1,500.00<i class="fas fa-chevron-down"></i></p>
+              <p class="top-bar-amount"><i class="fas fa-wallet"></i>$1,500.00<a href="#payout"><i class="fas fa-chevron-down"></i></a></p>
               <p class="top-bar-alerts"><i class="fas fa-bell"></i></p>
               <p class="top-bar-login"><i class="fas fa-user-circle"></i>Leonadro Dicaprio</p>
               <p class="top-bar-logout"><i class="fas fa-sign-out-alt quit"></i></p>
@@ -123,11 +123,12 @@
                 </div>
 
                 <div class="chart">
-                  <img src="images/chart.png">
+                  <p class="title">Earnings chart</p>
+                  <canvas id="myChart"></canvas>
                 </div>
               </div>
 
-              <div class="card-container second">
+              <div class="card-container second" id="links">
                 <h3>LINKS</h3>
                 <div class="links">
                   <div class="button">
@@ -219,7 +220,7 @@
                 </div>
               </div>
 
-              <div class="card-container second">
+              <div class="card-container second" id="banners">
                 <h3>BANNERS</h3>
                 <div class="links">
                   <div class="button">
@@ -279,7 +280,7 @@
                 </div>
               </div>
 
-              <div class="card-container third">
+              <div class="card-container third" id="personalData">
                 <h3>PERSONAL DATA</h3>
                 <div class="personal-data">
                   <form class="form" action="" method="POST">
@@ -344,10 +345,224 @@
                 </div>
               </div>
 
+              <div class="card-container fourth" id="details">
+                <h3>DETAIL STATISTIC</h3>
+                <div class="date-picker">
+                  <div class="date">
+                    <p class="date-start">16.05.2016</p>
+                    <p class="date-finish">16.05.2016 <i class="fas fa-calendar-alt"></i></p>
+                  </div>
+                  <div class="button undo">
+                    <i class="fas fa-undo-alt"></i>
+                  </div>
+                </div>
+                <div class="scroll-wrapper">
+                  <table class="detail-statistic">
+                    <thead>
+                      <tr>
+                        <th>Tracker name</th>
+                        <th>Initiated date</th>
+                        <th>Visits</th>
+                        <th>Unique</th>
+                        <th>Signups</th>
+                        <th>FTD</th>
+                        <th>Depositors</th>
+                        <th>Deposits ($)</th>
+                        <th>Payout ($)</th>
+                        <th>Turnover</th>
+                        <th>Deal</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>aff/sam_test</td>
+                        <td>17/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>34,425.00</td>
+                        <td>234.00</td>
+                        <td>421,342.00</td>
+                        <td>cpl (200)</td>
+                      </tr>
+                      <tr>
+                        <td>aff/leo_test</td>
+                        <td>15/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>29,436.00</td>
+                        <td>941.00</td>
+                        <td>784,435.00</td>
+                        <td>cpl (200)</td>
+                      </tr>
+                      <tr>
+                        <td>aff/sam_test</td>
+                        <td>17/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>34,425.00</td>
+                        <td>234.00</td>
+                        <td>421,342.00</td>
+                        <td>cpl (200)</td>
+                      </tr>
+                      <tr>
+                        <td>aff/leo_test</td>
+                        <td>15/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>29,436.00</td>
+                        <td>941.00</td>
+                        <td>784,435.00</td>
+                        <td>cpl (200)</td>
+                      </tr>
+                      <tr>
+                        <td>aff/sam_test</td>
+                        <td>17/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>34,425.00</td>
+                        <td>234.00</td>
+                        <td>421,342.00</td>
+                        <td>cpl (200)</td>
+                      </tr>
+                      <tr>
+                        <td>aff/leo_test</td>
+                        <td>15/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>29,436.00</td>
+                        <td>941.00</td>
+                        <td>784,435.00</td>
+                        <td>cpl (200)</td>
+                      </tr>
+                      <tr>
+                        <td>aff/sam_test</td>
+                        <td>17/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>34,425.00</td>
+                        <td>234.00</td>
+                        <td>421,342.00</td>
+                        <td>cpl (200)</td>
+                      </tr>
+                      <tr>
+                        <td>aff/leo_test</td>
+                        <td>15/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>29,436.00</td>
+                        <td>941.00</td>
+                        <td>784,435.00</td>
+                        <td>cpl (200)</td>
+                      </tr>
+                    </tbody>
+                    </table>
+                </div>
+              </div>
+
+              <div class="card-container fourth" id="payout">
+                <h3>PAYOUT</h3>
+                <div class="date-picker">
+                  <div class="date">
+                    <p class="date-start">16.05.2016</p>
+                    <p class="date-finish">16.05.2016 <i class="fas fa-calendar-alt"></i></p>
+                  </div>
+                  <div class="button undo">
+                    <i class="fas fa-undo-alt"></i>
+                  </div>
+                </div>
+                <div class="scroll-wrapper">
+                  <table class="payout">
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Amount ($)</th>
+                        <th>Deal</th>
+                        <th>Account</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>17/08/02 (12:58)</td>
+                        <td>34,425.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                      </tr>
+                      <tr>
+                        <td>15/08/02 (12:58)</td>
+                        <td>29,436.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                      </tr>
+                      <tr>
+                        <td>17/08/02 (12:58)</td>
+                        <td>34,425.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                      </tr>
+                      <tr>
+                        <td>15/08/02 (12:58)</td>
+                        <td>29,436.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                      </tr>
+                      <tr>
+                        <td>17/08/02 (12:58)</td>
+                        <td>34,425.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                      </tr>
+                      <tr>
+                        <td>15/08/02 (12:58)</td>
+                        <td>29,436.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                      </tr>
+                      <tr>
+                        <td>17/08/02 (12:58)</td>
+                        <td>34,425.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                      </tr>
+                      <tr>
+                        <td>15/08/02 (12:58)</td>
+                        <td>29,436.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
             </div>
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

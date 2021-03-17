@@ -1,7 +1,12 @@
 @import "variables";
-@import "mixins";
 @import "normalize";
+@import "sidebar";
+@import "topbar";
 @import "layout";
+@import "generalStatistic";
+@import "linksAndBanners";
+@import "personalData";
+@import "detailStatisticAndPayout";
 @import "modals";
 @import "media";
 
@@ -16,4 +21,20 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-container {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.display-container {
+  width: 85%;
+  margin-left: 15%;
 }
