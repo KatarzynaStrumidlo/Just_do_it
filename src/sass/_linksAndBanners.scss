@@ -28,6 +28,7 @@
     color: $user-name-color;
     text-decoration: none;
     width: 50%;
+    cursor: default;
   }
 
   i{
@@ -51,13 +52,13 @@
 
 .link:hover{
   background-color: $body-color;
-  cursor: pointer;
 
   .icons {
     display: inherit;
 
     i:hover{
       font-size: 20px;
+      cursor: default;
     }
   }
 }

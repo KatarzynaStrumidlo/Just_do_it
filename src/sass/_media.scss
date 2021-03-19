@@ -1,13 +1,14 @@
 @media (max-width: 1024px){
   .display-container{
     .top-bar{
-      width: 75%;
+      width: 82%;
       margin-left: 44px;
     }
   }
 
   .layout{
-    margin-left: 44px;
+    margin-left: 50px;
+    width: 100%;
   }
 }
 
@@ -16,6 +17,16 @@
     margin: 0;
     flex-direction: column;
     width: 100%;
+  }
+
+  .display-container{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .layout{
+    width: 100%;
+    margin: 0;
   }
 
   .sidebar{
@@ -202,7 +213,7 @@
   }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 540px) {
   .display-container{
     margin-left: 0;
     width: 100%;
