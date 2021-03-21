@@ -1,5 +1,5 @@
 @media (max-width: 1024px){
-  .display-container{
+  .main-container .display-container{
     .top-bar{
       width: 82%;
       margin-left: 44px;
@@ -17,11 +17,11 @@
     margin: 0;
     flex-direction: column;
     width: 100%;
-  }
 
-  .display-container{
-    margin-left: 0;
-    width: 100%;
+    .display-container{
+      margin-left: 0;
+      width: 100%;
+    }
   }
 
   .layout{
@@ -53,11 +53,6 @@
       z-index: 2;
       padding-top: 10px;
     }
-  }
-
-  .display-container{
-    width: 100%;
-    margin: 0;
   }
 
   .top-bar{
@@ -144,10 +139,9 @@
     justify-content: center;
   }
 
-  .form-data{
+  .personal-data .form-data{
     flex-direction: column;
-    width: 100%;
-    border: black solid 2px;
+    width: 80%;
 
     input{
       width: 100%;
@@ -214,7 +208,7 @@
 }
 
 @media (max-width: 540px) {
-  .display-container{
+  .main-container .display-container{
     margin-left: 0;
     width: 100%;
   }
