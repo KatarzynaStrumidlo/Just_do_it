@@ -1,11 +1,4 @@
 @media (max-width: 1024px){
-  .main-container .display-container{
-    .top-bar{
-      width: 82%;
-      margin-left: 44px;
-    }
-  }
-
   .layout{
     margin-left: 50px;
     width: 100%;
@@ -13,6 +6,14 @@
 }
 
 @media (max-width: 768px) {
+  .main-container .display-container{
+    .top-bar{
+      width: 100%;
+      margin-top: 70px;
+      padding-top: 10px;
+    }
+  }
+
   .main-container {
     margin: 0;
     flex-direction: column;
@@ -215,7 +216,7 @@
 
   .layout{
     width: 100%;
-    margin: 0;
+    margin: 15px 0;
   }
 
   .top-bar{
@@ -244,6 +245,10 @@
       width: 70%;
       font-size: 15px;
     }
+  }
+
+  .links .button{
+    width: 40%;
   }
 
   .modal-message{
