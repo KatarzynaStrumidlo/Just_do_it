@@ -11,10 +11,32 @@ function closeMenu(){
 document.querySelectorAll('.menu-item').forEach(function(btn) {
   btn.addEventListener('click', function(){
     closeMenu();
-    console.log('działa');
   });
 
 });
+
+function switchTab(e){
+  e.preventDefault();
+  const clickedElement = this;
+  const activeTabLinks = document.querySelectorAll('.menu-item');
+  for(let activeTabLink of activeTabLinks){
+    activeTabLink.classList.remove('active');
+  }
+  clickedElement.classList.add('active');
+  const activeTabs = document.querySelectorAll('.card-container');
+  for(let activeTab of activeTabs){
+    activeTab.classList.remove('active');
+  }
+  const tabSelector = clickedElement.getAttribute('href');
+  const targetTab = document.querySelector(tabSelector);
+  targetTab.classList.add('active');
+}
+
+const links = document.querySelectorAll('.menu-item');
+for(let link of links){
+  link.addEventListener('click', switchTab);
+}
+
 
 function closeModal() {
   document.getElementById('overlay').classList.remove('show');
