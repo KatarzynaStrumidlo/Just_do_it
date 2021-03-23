@@ -14,13 +14,13 @@ body{
     font-family: $logo-font;
     font-size: 40px;
     text-align: center;
-    margin: 20px 0 0 10px;
-    padding-bottom: 20px;
+    margin-top: 20px;
 
     i{
       font-size: 25px;
       margin-left: 50px;
       color: $sidebar-text-color;
+      display: none;
     }
   }
 

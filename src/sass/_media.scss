@@ -6,6 +6,17 @@
 }
 
 @media (max-width: 768px) {
+  .sidebar{
+    h1{
+      margin-bottom: 0;
+
+      i{
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+  }
+
   .main-container .display-container{
     .top-bar{
       width: 100%;
