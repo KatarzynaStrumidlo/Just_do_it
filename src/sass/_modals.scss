@@ -111,12 +111,12 @@
 
 .modal-quit{
   width: 30%;
-  height: 20%;
 
   .buttons{
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    align-items: center;
+    margin: 20px 0;
   }
 
   .button{
